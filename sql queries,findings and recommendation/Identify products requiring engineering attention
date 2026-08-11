@@ -1,0 +1,29 @@
+                                                        BUSINESS QUESTION
+Which products receive the highest proportion of critical and high-priority tickets?
+
+
+                                                           Query:
+SELECT   
+    product,
+    COUNT(*) AS total_tickets,
+    SUM(CASE WHEN priority IN ('Critical', 'High') THEN 1 ELSE 0 END) AS critical_high_tickets,
+    ROUND(
+        SUM(CASE WHEN priority IN ('Critical', 'High') THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2
+    ) AS proportion_percentage
+FROM customer_support
+GROUP BY product
+ORDER BY proportion_percentage DESC;
+
+
+                                                                Finding
+SecureVault had the highest proportion of Critical and High-priority tickets among all products.
+
+
+                                                            Why did it happen?
+When I investigated further, I found that SecureVault also had the highest average number of customer interactions. This suggests that issues related to SecureVault are generally more
+difficult to resolve and usually require more back and forth communication between the customer and the support team.	
+
+                                                 
+                                                             Recommendation
+The engineering team should review the most common issues affecting SecureVault and fix the recurring problems causing customers to raise Critical and High-priority tickets.
+Creating better troubleshooting guides for support agents could also reduce the number of interactions needed before these issues are resolved.

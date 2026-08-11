@@ -1,0 +1,21 @@
+                                                                      BUSINESS QUESTION
+Which agents handle the most tickets, and how do their resolution times compare?
+
+                                                                     
+                                                                         Query:
+SELECT   
+assigned_agent,
+COUNT(*)total_tickets,
+ROUND(AVG(resolution_time_hrs),2)resolution_time
+FROM customer_support
+GROUP BY assigned_agent
+ORDER BY total_tickets DESC;
+
+                                                                         Finding
+Agent 1 handled the highest number of tickets, but despite the workload, her average resolution time was still faster than some agents who handled fewer tickets.
+
+
+                                                                      Recommendation
+Setting clear performance goals for every support agent so everyone knows what is expected. Track important KPIs like ticket volume, resolution time, and customer satisfaction regularly.
+This helps managers balance workloads better and identify agents who may need additional support or training.
+

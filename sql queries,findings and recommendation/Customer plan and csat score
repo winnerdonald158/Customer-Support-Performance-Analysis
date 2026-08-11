@@ -1,0 +1,11 @@
+                                                                 BUSINESS QUESTION
+Which customer plans have the lowest customer satisfaction (CSAT)?
+
+                                                           Query:
+SELECT 
+    customer_plan,
+   ROUND(AVG(csat_score),2) AS average_csating_score
+FROM customer_support
+GROUP BY customer_plan
+ORDER BY average_csating_score ASC;
+

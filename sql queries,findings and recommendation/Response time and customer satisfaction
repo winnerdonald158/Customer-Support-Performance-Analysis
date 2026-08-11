@@ -1,0 +1,21 @@
+                                                             BUSINESS QUESTIONS
+Does response time affect customer satisfaction?
+
+
+                                                              Query:
+SELECT 
+    csat_score,
+    ROUND(AVG(first_response_time_hrs),2) AS avg_first_response
+FROM customer_support
+WHERE csat_score IS NOT NULL
+GROUP BY csat_score
+ORDER BY csat_score;
+
+                                                         Finding
+The analysis didn't show a clear relationship between first response time and customer satisfaction. Some customers who received quick responses still gave low satisfaction scores, 
+while others who waited longer gave similar ratings.
+
+
+                                                      Recommendation
+Instead of focusing only on improving response time, the support team should also focus on improving resolution quality and communication. It would also be helpful to collect more
+information about what customers 

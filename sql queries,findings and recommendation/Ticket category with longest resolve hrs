@@ -1,0 +1,26 @@
+                                                    BUSINESS QUESTION
+Which ticket categories take the longest to resolve?
+
+Query:
+SELECT  
+category,
+ROUND(AVG(resolution_time_hrs),2) resolve_hrs
+FROM customer_support
+GROUP BY category
+ORDER BY total_resolve_hrs DESC ;
+
+                                                        Finding
+Delivery & Shipping tickets had the highest average resolution time, taking about 68.73 hours to resolve compared to the other support categories.
+
+                                               
+                                                   Why I investigated it
+Since Delivery & Shipping had the longest resolution time, I wanted to understand what might be contributing to the delay. I looked at factors like customer plans, assigned agents,
+regions, escalated tickets, reopened tickets, first response time, and the number of customer interactions.
+
+                                                    What I found
+After checking these factors, I couldn't find enough evidence to confidently explain why Delivery & Shipping tickets took longer than the other categories. Based on the available data,
+the actual reason couldn't be determined.
+
+                                                       Recommendation
+I would suggest that we collect more delivery-related information such as shipping status, courier delays, warehouse processing time, inventory availability, or logistics updates.
+Having this information would make it easier to identify what is actually causing the longer resolution time.

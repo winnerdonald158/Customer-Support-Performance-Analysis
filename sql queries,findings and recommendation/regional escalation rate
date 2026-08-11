@@ -1,0 +1,29 @@
+                                                                   BUSINESS QUEESTION
+Which regions experience the highest escalation rates?
+
+
+                                                                 Query:
+SELECT  
+    region,
+    COUNT(*) AS total_tickets,
+    SUM(CASE WHEN escalated = true THEN 1 ELSE 0 END) AS escalated_tickets,
+    ROUND(
+        SUM(CASE WHEN escalated = true THEN 1 ELSE 0 END)*100.0
+        / COUNT(*),2
+    ) AS escalation_rate
+FROM customer_support
+GROUP BY region
+ORDER BY escalation_rate DESC;
+
+
+                                                                Finding
+North America had the highest escalation rate compared to every other region.
+
+
+                                                        Why did it happen?
+When I looked further into the data, I noticed that North America also had the highest number of escalated tickets, the highest number of Critical and High-priority tickets,
+and one of the highest numbers of reopened tickets. This suggests that customers in this region are experiencing more complex issues that usually require extra attention before 
+they can be resolved. 
+
+                                                      Recommendation
+Take a closer look at the common issues coming from North America and identify the ones that keep getting escalated. It would also help to provide additional support or technical resources for that region so complex issues can be resolved before they need to be escalated.

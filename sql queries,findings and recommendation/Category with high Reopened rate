@@ -1,0 +1,32 @@
+                                                                  BUSINESS QUESTION
+Which ticket categories are most likely to be reopened?
+
+
+                                                                  Query:
+SELECT   
+    category,
+    COUNT(*) AS total_tickets,
+    SUM(CASE WHEN reopened = true THEN 1 ELSE 0 END) AS reopened_tickets,
+    ROUND(
+        SUM(CASE WHEN reopened = true THEN 1 ELSE 0 END)*100.0
+        / COUNT(*),2
+    ) AS reopen_rate
+FROM customer_support
+GROUP BY category
+ORDER BY reopen_rate DESC;
+
+
+                                                            Finding
+Account Access had the highest ticket reopen rate among all support categories.
+
+                                      
+                                                   Why did it happen;
+Account access had the highest reopen rate among all other categories, further analysis shows that Enterprise and Professional customers recorded the highest number of
+reopened Account Access tickets. This suggests that account-related issues for these customers may be more difficult to fully resolve on the first attempt
+
+                            
+                                                 Recommendation:
+Implement a thorough root cause analysis process to identify why tickets are being reopened. This helps in addressing not just the symptoms but the underlying issues.
+Providing better troubleshooting guides, updating the knowledge base Training and development and giving agents additional training on these issues could help reduce the number of
+reopened tickets.
+

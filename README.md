@@ -27,14 +27,14 @@ The objective of this analysis was to evaluate customer support performance, ide
 
 ---
 
-## Tools Used
+                                                 ## Tools Used
 
 * PostgreSQL
 * Power BI
 
 ---
 
-## Skills Demonstrated
+                                               ## Skills Demonstrated
 
 * SQL
 * PostgreSQL
@@ -52,7 +52,7 @@ The objective of this analysis was to evaluate customer support performance, ide
 
 ---
 
-## Dataset
+                                                    ## Dataset
 
 The dataset contains customer support ticket information including:
 
@@ -68,7 +68,7 @@ The dataset contains customer support ticket information including:
 
 ---
 
-## Business Questions Answered
+                                               ## Business Questions Answered
 
 The analysis focused on questions such as:
 
@@ -89,7 +89,7 @@ The analysis focused on questions such as:
 
 ---
 
-## Key Findings
+                                                        ## Key Findings
 
 ### Delivery & Shipping Takes Longest to Resolve
 
@@ -119,7 +119,7 @@ This suggests that response speed alone may not be enough to improve customer sa
 
 ---
 
-## Dashboard
+                                                                     ## Dashboard
 
 The Power BI dashboard highlights:
 
@@ -139,7 +139,7 @@ The Power BI dashboard highlights:
 
 ---
 
-## Technical Approach
+                                                                        ## Technical Approach
 
 ### PostgreSQL
 
@@ -174,7 +174,7 @@ The dashboard includes:
 
 Based on the analysis, I recommend:
 
-* Investigate the causes of long **Delivery & Shipping** resolution times.
+* The causes of long **Delivery & Shipping** resolution times should be investigated.
 * Review support processes contributing to high escalation rates in **North America**.
 * Investigate why **Account Access** issues are frequently reopened.
 * Avoid relying on first response speed alone as a measure of customer satisfaction.
@@ -183,7 +183,7 @@ Based on the analysis, I recommend:
 
 ---
 
-## Connect With Me
+                                                   ## Connect With Me
 
 **Winner Donald**
 

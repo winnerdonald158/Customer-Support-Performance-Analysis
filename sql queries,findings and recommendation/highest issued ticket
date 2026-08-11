@@ -1,0 +1,15 @@
+                                                        BUSINESS QUESTION
+Which products generate the highest number of support tickets?
+Business value
+Identify products creating the highest support cost.
+                                                 
+                                                          Query:
+SELECT  
+product,
+COUNT(*)support_tickets
+FROM customer_support
+GROUP BY product
+ORDER BY support_tickets;
+
+                                          FINDINGS:
+CloudSync Pro had 560 support ticket, which was the highest total number of support ticket gotten from all the products
